@@ -34,13 +34,6 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
-          readinessProbe:
-            httpGet:
-              path: ${URL_TEST}
-              port: 8080
-            initialDelaySeconds: 30
-            periodSeconds: 5
-            successThreshold: 1
       terminationGracePeriodSeconds: 60
 ---
 apiVersion: v1
